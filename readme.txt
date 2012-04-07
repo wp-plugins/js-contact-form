@@ -6,7 +6,7 @@ Requires at least: 2.3
 Tested up to: 3.3.1
 Stable tag: trunk
 
-Creative Wordpress Contact Form with attachment support and also include Empty Form validation.[contact_form]
+Java Scripts Contact Form with attachment support and also include Empty Form validation.
 
 == Description == 
 Config:- after installation then go to plugin Editor>Js Contact Form.php and findout yourname@mail.com then replace it
