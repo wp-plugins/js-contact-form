@@ -2,7 +2,7 @@
 /*
 Plugin Name: Js Contact Form
 Plugin URI: http://bdweblab.com/plugins/js-contact-form/
-Description: Creative Wordpress Contact Form with attachment support and also include Empty Form validation.</br>At first go to plugin editor and (Js Contact Form.php)findout 'yourname@mail.com' then Replace This Email Address.Now create a new page at your wordpress site and insert this code[contact_form]
+Description: Creative Wordpress Contact Form with attachment support and also include Empty Form validation.At first go to plugin editor and (Js Contact Form.php)findout 'yourname@mail.com' then Replace This Email Address.Now create a new page at your wordpress site and insert this code[contact_form]
 Author: Cx Rana
 Version: 1.0
 Author URI: http://bdweblab.com/about-us
