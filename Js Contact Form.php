@@ -88,7 +88,7 @@ if ( !$_FILES['attachment']['error'] == 4 ) { //something was send
 		
 }
 
-if ( !$mail_to_send->Send() ) wp_die('Error : Mail Sending Failed - Js Contact Form : ' . $mail_to_send->ErrorInfo);
+if ( !$mail_to_send->Send() ) wp_die('Error : Mail Sending Failed,please check your contact form destination e-mail address,login dashboard>Go to plugin Editor>Js Contact Form.php and findout yourname@mail.com then replace it - Msg:Js Contact Form Developer : ' . $mail_to_send->ErrorInfo);
 
 $_SESSION['contact_form_success'] = 1;
 
