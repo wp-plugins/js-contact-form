@@ -6,13 +6,12 @@ Requires at least: 2.3
 Tested up to: 3.3.1
 Stable tag: trunk
 
-Creative Wordpress Contact Form with attachment support and also include Empty Form validation.
+Creative Wordpress Contact Form with attachment support and also include Empty Form validation.[contact_form]
 
 == Description == 
-Config: Creative Wordpress Contact Form with attachment support and also include Empty Form validation. at your wordpress site and insert this code[contact_form]
-after installation then go to your Plugin Editor and findout 'yourname@mail.com' and replace it for ypur own mailing.
-Now go to addnew page>Create new pages>paste this code  [contact_form] 
-if show Error (Mail Sending Failed): please check your contact form destination e-mail address,login to dashboard>Go to plugin Editor>Js Contact Form.php and findout yourname@mail.com then replace it
+Config:- after installation then go to plugin Editor>Js Contact Form.php and findout yourname@mail.com then replace it
+Now go to addnew page>Create new pages> paste this code  [contact_form] 
+</br> if show Error (Mail Sending Failed): please check your contact form destination e-mail address,login to dashboard>Go to plugin Editor>Js Contact Form.php and findout yourname@mail.com then replace it
 
 = Features =
 * Simple Contact Systems for Your Wordpress Blog</br>
