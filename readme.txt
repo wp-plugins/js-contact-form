@@ -6,7 +6,7 @@ Requires at least: 2.3
 Tested up to: 4.2.4
 Stable tag: trunk
 
-Java Scripts Contact Form,with attachment support and including Empty Form validation.
+Java Scripts Contact Form,with attachment support and Empty Form validation.
 
 == Description == 
 = How to Use =
