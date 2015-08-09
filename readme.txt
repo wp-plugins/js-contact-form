@@ -42,7 +42,7 @@ Some active user. <a href="http://www.kingsolomonhotel.com/">King Solomon Hotel,
 
 == Screenshots ==
 
-1. Js Contact Form Demo
+1. Js Contact Form Example
 2. Example Website
 
 == License ==
