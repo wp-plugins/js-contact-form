@@ -21,19 +21,21 @@ unset($_SESSION['contact_form_success']);
 
 $markup = <<<EOT
 
-<div id="commentform">
+<div id="cform">
 
 	{$contact_form_success}
      
    <form onsubmit="return validateForm(this);" action="{$form_action}" method="post" enctype="multipart/form-data" style="text-align: left">
    
-   <p><input type="text" name="author" id="author" value="{$author_default}" size="22" /> <label for="author">Your Name *</label></p>
-   <p><input type="text" name="email" id="email" value="{$email_default}" size="22" /> <label for="email">E mail *</label></p>
-   <p><input type="text" name="subject" id="subject" value="" size="22" /> <label for="subject">Subject *</label></p>
-   <p><textarea name="message" id="message" cols="100%" rows="10">Please type here...</textarea></p>
-   <p><label for="attachment"><strong>File/photos </strong></label> <input type="file" name="attachment" id="attachment" /></p>
-   <p><input name="send" type="submit" id="send" value="Send" /></p>
-   
+   <p><input type="text" name="author" id="author" value="{$author_default}" size="22" /> <label for="author"> Your Name *</label></p>
+   <p><input type="text" name="email" id="email" value="{$email_default}" size="22" /> <label for="email"> E mail *</label></p>
+   <p><input type="text" name="subject" id="subject" value="" size="22" /> <label for="subject"> Subject *</label></p>
+   <div id="message"><p><textarea name="message" id="message" cols="70%" rows="10"></textarea></p>
+   </div>
+   <p><label for="attachment">File/photos</label> <input type="file" name="attachment" id="attachment" /></p>
+   <div id="send">
+   <input name="send" type="submit" id="send" value="Send" />
+   </div>
    <input type="hidden" name="contact_form_submitted" value="1">
    
    </form>
@@ -88,7 +90,7 @@ if ( !$_FILES['attachment']['error'] == 4 ) { //something was send
 		
 }
 
-if ( !$mail_to_send->Send() ) wp_die('Error : Mail Sending Failed,please check your contact form destination e-mail address,login dashboard>Go to plugin Editor>Js Contact Form.php and findout yourname@mail.com then replace it - Msg:Js Contact Form Developer : ' . $mail_to_send->ErrorInfo);
+if ( !$mail_to_send->Send() ) wp_die('Error : Mail Sending Failed,please check your contact form destination e-mail address,login dashboard>Go to plugin Editor>Js Contact Form.php and search "yourname@mail.com" then replace it with your own email address. - ' . $mail_to_send->ErrorInfo);
 
 $_SESSION['contact_form_success'] = 1;
 
@@ -107,7 +109,6 @@ function validateForm(form) {
 
 	var errors = '';
 	var regexpEmail = /\w{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,3}$/;
-		
 	if (!form.author.value) errors += "Error 1 :  please write your name.\n";
 	if (!regexpEmail.test(form.email.value)) errors += "Error 2 :  your e-mail address.\n";
 	if (!form.subject.value) errors += "Error 3 :  a subject.\n";
@@ -125,5 +126,23 @@ return true;
 <?php }
 
 add_action('wp_head', 'contact_form_js');
+add_action( 'wp_enqueue_scripts', 'safely_add_stylesheet' );
 
+    /**
+     * Add stylesheet to the page
+     */
+    function safely_add_stylesheet() {
+        wp_enqueue_style( 'prefix-style', plugins_url('style.css', __FILE__) );
+    }
+	function add_customizer_styles()
+{
+    $bgcolor = get_theme_mod( 'background-color' );
+    $custom_css = "
+            body
+            {
+                    background: {$bgcolor};
+            }";
+    wp_add_inline_style( 'inline-custom-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'add_customizer_styles' );
 ?>
