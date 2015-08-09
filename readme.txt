@@ -9,14 +9,15 @@ Stable tag: trunk
 Java Scripts Contact Form,with attachment support and including Empty Form validation.
 
 == Description == 
-How to Use:- after installation then go to plugin Editor >Js Contact Form.php and search "yourname@mail.com" then replace it with your own email address.
+= How to Use =
+after installation then go to plugin Editor >Js Contact Form.php and search "yourname@mail.com" then replace it with your own email address.</br>
 Now go to add new page> Create new pages> paste this code  [contact_form] 
 
 = If Show Error = 
 if show Error (Mail Sending Failed): please check your contact form destination e-mail address,login to dashboard> Go to plugin Editor>Js Contact Form.php and and search "yourname@mail.com" then replace it with your own email address.
 
 = Features =
-* Simple Contact Pages for Your Wordpress Website</br>
+* Simple Contact Pages for Your WordPress Website</br>
 * Java Scripts validation Form</br>
 * Empty Form validation 
 * File/Photos Attachment
