@@ -15,7 +15,7 @@ $author_default = $_COOKIE['comment_author_'.COOKIEHASH];
 $email_default  = $_COOKIE['comment_author_email_'.COOKIEHASH];
 
 if ( ($_SESSION['contact_form_success']) ) {
-$contact_form_success = '<p style="color: green">Thank your for Your Feedback.</p>';
+$contact_form_success = '<p style="color: green">Thank you for Your Messages.</p>';
 unset($_SESSION['contact_form_success']);
 }
 
@@ -59,9 +59,9 @@ session_start();
  $subject = ( isset($_POST['subject']) ) ? trim(strip_tags($_POST['subject'])) : null;
  $message = ( isset($_POST['message']) ) ? trim(strip_tags($_POST['message'])) : null;
 
- if ( $author == '' ) wp_die('Error 1: Add your Name Please.'); 
- if ( !is_email($email) ) wp_die('Error 2: Type your Email Please.');
- if ( $subject == '' ) wp_die('Error 3: Add a Subject First.');
+ if ( $author == '' ) wp_die('Error 1: Write your Name please.'); 
+ if ( !is_email($email) ) wp_die('Error 2: Type your Email address please.');
+ if ( $subject == '' ) wp_die('Error 3: Write a Subject First.');
  
  //we will add e-mail sending support here soon
  
@@ -108,9 +108,9 @@ function validateForm(form) {
 	var errors = '';
 	var regexpEmail = /\w{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,3}$/;
 		
-	if (!form.author.value) errors += "Warning 1 : Name box empty.\n";
-	if (!regexpEmail.test(form.email.value)) errors += "Warning 2 : Email box empty.\n";
-	if (!form.subject.value) errors += "Warning 3 : Subject.\n";
+	if (!form.author.value) errors += "Error 1 :  please write your name.\n";
+	if (!regexpEmail.test(form.email.value)) errors += "Error 2 :  your e-mail address.\n";
+	if (!form.subject.value) errors += "Error 3 :  a subject.\n";
 
 	if (errors != '') {
 		alert(errors);
