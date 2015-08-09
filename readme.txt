@@ -1,6 +1,6 @@
 === Js Contact Form ===
 Contributors: Cx Rana
-Developer link: https://bdweblab.com/about-us
+Developer link: https://cxrana.com
 Tags:  Js Contact Form, Wordpress contact form, java scripts wordpress contact plugin, wordpress contact plugin, Wordpress Plugin,,contact page, Cx Rana, bdweblab ,Simple php contact form
 Requires at least: 2.3
 Tested up to: 3.3.1
