@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Js Contact Form
-Plugin URI: http://bdweblab.com/plugins/js-contact-form/
-Description: Java Scripts Contact Form with attachment support and also include Empty Form validation.At first go to plugin editor and (Js Contact Form.php)findout 'yourname@mail.com' then Replace This Email Address.Now create a new page at your wordpress site and insert this code[contact_form]
+Plugin URI: https://cxrana.com
+Description: Java Scripts Contact Form,with attachment support and Empty Form validation. At first go to plugin editor and (Js Contact Form.php)files and search "yourname@mail.com" then replace it with your own email address. Now create a new page at your WordPress site and insert this code [contact_form]
 Author: Cx Rana
 Version: 1.0
-Author URI: http://bdweblab.com/about-us
+Author URI: https://cxrana.com
 */
 
 function contact_form_markup() {
